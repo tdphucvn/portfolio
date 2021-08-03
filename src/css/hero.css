@@ -27,3 +27,88 @@
   width: calc(100% + 10px);
   height: calc(40%);
 }
+
+.about-link a {
+  color: black;
+  text-decoration: none;
+}
+
+.about-link {
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+  width: max-content;
+}
+
+.about-link ::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: -7px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  z-index: -1;
+  background-color: yellow;
+  transition: 0.6s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+.about-link :hover::after {
+  left: 0;
+  bottom: -2px;
+  width: calc(100% + 10px);
+  height: calc(100% + 5px);
+}
+
+.animation-first-order {
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+.animation-second-order {
+  opacity: 0;
+  animation: slideInFromLeft 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+#astranec {
+  opacity: 0;
+  animation: slideInFromRight 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+#wlessbuds {
+  opacity: 0;
+  animation: slideInFromRight 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+#hdnetmovies {
+  opacity: 0;
+  animation: slideInFromRight 1.5s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

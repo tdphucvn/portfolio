@@ -1,0 +1,31 @@
+.project-image-container {
+  position: relative;
+  height: 360px;
+  width: 100%;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0);
+  transform: rotate(-25deg) skew(25deg) scale(1);
+  transition: 0.5s;
+}
+.project-image-container img {
+  position: absolute;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.project-image-container img:nth-child(4) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}
+.project-image-container img:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.8;
+}
+.project-image-container img:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.6;
+}
+.project-image-container img:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.4;
+}

@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-end',
         margin: '20px 20px 0 0',
+        zIndex: 3,
     },
     navigationSquare: {
         width: '15vh',

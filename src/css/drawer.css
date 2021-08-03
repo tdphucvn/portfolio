@@ -2,6 +2,7 @@
   color: black;
   position: relative;
   margin-top: 40px;
+  text-decoration: none;
 }
 
 .link h2 {
@@ -15,7 +16,7 @@
   left: 20px;
   bottom: -10px;
   width: calc(100% - 10px);
-  height: calc(100% - 10px);
+  height: calc(50%);
   z-index: -1;
   background-color: yellow;
   transition: 0.6s cubic-bezier(0.25, 0.1, 0, 2.05);
