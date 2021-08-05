@@ -71,7 +71,7 @@ const Hero = ({drawerState}) => {
     const [drawer, setDrawer] = drawerState;
 
     return (
-        <section className={classes.container} name="hero">
+        <section className={clsx(classes.container, 'js-scroll')} name="hero">
             <NavBar drawerState={[drawer, setDrawer]} />
             <Grid container className={classes.gridContainer}>
                 <Grid item md={4} className={clsx(classes.leftColumn, classes.column, 'leftAnimation')}>
@@ -83,9 +83,14 @@ const Hero = ({drawerState}) => {
                         <Typography variant="body1" className={classes.introduction} gutterBottom>A self-taught Full-stack Engineer</Typography>
                         <Typography variant="body1" className={classes.introduction} gutterBottom>Currently based in Cheb, Czech Republic</Typography>
                     </div>
-                    <span className="about-link animation-second-order">
-                        <Typography component="a" href="#about">About Me</Typography>
-                    </span>
+                    <div>
+                        <span className="about-link animation-second-order">
+                            <Typography component="a" href="#about">About Me</Typography>
+                        </span>
+                        <span className="about-link animation-second-order" style={{marginLeft: '15px'}}>
+                            <Typography component={RouterLink} to="/contact">Contact Me</Typography>
+                        </span>
+                    </div>
                     <div className={classes.growContainer}></div>
                     <Divider className={classes.socialMediasDivider}></Divider>
                     <div className={clsx(classes.socialMedias, 'animation-first-order')}>

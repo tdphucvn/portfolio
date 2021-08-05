@@ -53,7 +53,7 @@ const DrawerNavigation = ({drawerState}) => {
                 flexDirection: 'column',
                 alignItems: 'center',               
             }}>
-                <ListItem component='a' href={'/'} className="link" style={{width: 'auto'}}>
+                <ListItem component={RouterLink} to={'/'} className="link" style={{width: 'auto'}}>
                     <Typography variant="h4" component="h2">Home</Typography>
                 </ListItem>
                 <ListItem component={RouterLink} to={'/about'} className="link" style={{width: 'auto'}}>

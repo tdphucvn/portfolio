@@ -5,12 +5,14 @@ import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaGithub } from "rea
 import { FiMonitor } from "react-icons/fi";
 import { SiTypescript } from "react-icons/si";
 
+import clsx from 'clsx';
+
 import background from '../../images/wlessbuds.PNG'; 
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100vh',
-        paddingTop: '20px'
+        minHeight: '100vh',
+        paddingTop: '20px',
     },
     githubButton: {
         color: 'white',
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const Ecom = () => {
     const classes = useStyles();
     return (
-        <section name="ecom" className={classes.container}>
+        <section name="ecom" className={clsx(classes.container, 'js-scroll')}>
             <Container maxWidth="lg">
                 <Grid container>
                     <Grid item md={5} sm={12}>
@@ -78,12 +80,13 @@ const Ecom = () => {
                             <Button variant="outlined" component="a" href="https://wlessbuds.herokuapp.com" target="_blank"><FiMonitor style={{marginRight: '5px'}}/>Live Demo</Button>
                         </ButtonGroup>
                     </Grid>
-                    <Grid item md={7} sm={0} className={classes.projectContainer}>
+                    <Grid item md={7} className={classes.projectContainer}>
                         <div className="project-image-container">
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
+                            <Button variant="contained" className="live-demo-button">Live Demo</Button>
                         </div>
                     </Grid>
                 </Grid>

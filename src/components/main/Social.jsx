@@ -1,17 +1,18 @@
 import React from 'react'
 import { makeStyles, Container, Grid, Typography, List, ListItem, ListItemText, ListItemIcon, ButtonGroup, Button } from '@material-ui/core';
-import { FaHtml5, FaCss3Alt, FaNodeJs, FaDatabase, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaNodeJs, FaDatabase, FaGithub, FaJs } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
 import { SiTypescript } from "react-icons/si";
 import { Link as RouterLink } from 'react-router-dom';
+import clsx from 'clsx';
 
 import background from '../../images/astranec.PNG';
 import '../../css/project.css';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100vh',
-        paddingTop: '20px'
+        minHeight: '100vh',
+        paddingTop: '20px',
     },
     githubButton: {
         color: 'white',
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const Social = () => {
     const classes = useStyles();
     return (
-        <section className={classes.container} name="social" >
+        <section className={clsx(classes.container, 'js-scroll')} name="social" >
             <Container maxWidth="lg">
                 <Grid container>
                     <Grid item md={5} sm={12}>
@@ -59,6 +60,10 @@ const Social = () => {
                                     <ListItemIcon style={{minWidth: 20}}><SiTypescript /></ListItemIcon>
                                     <ListItemText>Typescript</ListItemText>
                                 </ListItem>
+                                <ListItem style={{padding: '0 16px'}}>
+                                    <ListItemIcon style={{minWidth: 20}}><FaJs /></ListItemIcon>
+                                    <ListItemText>JavaScript</ListItemText>
+                                </ListItem>
                                 <Typography variant="h6">Backend</Typography>
                                 <ListItem style={{padding: '0 16px'}}>
                                     <ListItemIcon style={{minWidth: 20}}><FaNodeJs /></ListItemIcon>
@@ -75,12 +80,13 @@ const Social = () => {
                             <Button variant="outlined" component="a" href="https://astranec.herokuapp.com" target="_blank"><FiMonitor style={{marginRight: '5px'}}/>Live Demo</Button>
                         </ButtonGroup>
                     </Grid>
-                    <Grid item md={7} sm={0} className={classes.projectContainer}>
+                    <Grid item md={7} className={clsx(classes.projectContainer, 'scroll')}>
                         <div className="project-image-container">
                             <img src={background} alt="astranecBackground"/>
                             <img src={background} alt="astranecBackground"/>
                             <img src={background} alt="astranecBackground"/>
                             <img src={background} alt="astranecBackground"/>
+                            <Button variant="contained" className="live-demo-button">Live Demo</Button>
                         </div>
                     </Grid>
                 </Grid>

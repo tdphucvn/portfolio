@@ -9,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
     container: {
         position: 'absolute',
-        width: '100vw',
+        width: '100%',
         display: 'flex',
     },
     navigation: {
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'flex-start',
         margin: '20px 0 0 20px',
+        zIndex: 3,
     },
     rightNavigation: {
         display: 'flex',

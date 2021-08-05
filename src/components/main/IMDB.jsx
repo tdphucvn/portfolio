@@ -2,14 +2,16 @@ import React from 'react'
 import { makeStyles, Container, Grid, List, ListItem, ListItemText, ListItemIcon, Typography, Button, ButtonGroup } from '@material-ui/core';
 import background from '../../images/hdnet.PNG'; 
 import { Link as RouterLink } from 'react-router-dom';
-import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaNodeJs, FaDatabase, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaGithub } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
 
+import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        height: '100vh',
-        paddingTop: '20px'
+        minHeight: '100vh',
+        paddingTop: '20px',
+
     },
     githubButton: {
         color: 'white',
@@ -28,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 const IMDB = () => {
     const classes = useStyles();
     return (
-        <section name="movies" className={classes.container}>
+        <section name="movies" className={clsx(classes.container, 'js-scroll')}>
             <Container maxWidth="lg">
                 <Grid container>
                     <Grid item md={5} sm={12}>
@@ -68,12 +70,13 @@ const IMDB = () => {
                             <Button variant="outlined" component="a" href="https://hdnetmovies.netlify.app/" target="_blank"><FiMonitor style={{marginRight: '5px'}}/>Live Demo</Button>
                         </ButtonGroup>
                     </Grid>
-                    <Grid item md={7} sm={0} className={classes.projectContainer}>
+                    <Grid item md={7} className={classes.projectContainer}>
                         <div className="project-image-container">
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
+                            <Button variant="contained" className="live-demo-button">Live Demo</Button>
                         </div>
                     </Grid>
                 </Grid>
