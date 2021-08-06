@@ -38,7 +38,7 @@ const IMDB = () => {
                         <div>
                             <Typography variant="h4" component="h3">HDNet Movies</Typography>
                             <Typography variant="subtitle1">Movie Database using TMDB API</Typography>
-                            <Typography variant="body1" paragraph>This project was build using React.js and Material UI for frontend. All the magic behind the scenes is handled with Express.js and payments are securely managed by Stripe.</Typography>
+                            <Typography variant="body1" paragraph gutterBottom>This application was built using React.js as the frontend framework. All the data that is displayed is then fetched from the TMDB API.</Typography>
                         </div>
                         <div className="about-link" style={{margin: '0 0 30px 0'}}>
                             <Typography component={RouterLink} to="/hdnetmovies">HDNet Movies</Typography>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import ScrollToTop from './routes/ScrollToTop';
+import Footer from './components/navigation/Footer';
 
 import Main from './pages/Main';
 import AboutPage from './pages/AboutPage';
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/hdnetmovies" component={IMDBPage} />
         <Route path="/contact" component={Contact} />
       </Switch>
+      <Footer />
     </Router>
   )
 };

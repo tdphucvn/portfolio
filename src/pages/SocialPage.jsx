@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import NavBar from '../components/navigation/NavBar';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
+import StudyCases from '../components/navigation/StudyCases';
+
 import clsx from 'clsx';
 
 import { Typography, makeStyles, Divider, Grid, List, ListItem, ListItemText, ListItemIcon, Container, Button, ButtonGroup } from '@material-ui/core';
@@ -70,7 +72,7 @@ const SocialPage = () => {
     const [drawer, setDrawer] = useState(false);
 
     return (
-        <div style={{overflowY: 'auto', minHeight: '100vh'}}>
+        <div style={{paddingBottom: '30px'}}>
             <NavBar drawerState={[drawer, setDrawer]} />
             <div>
                 <div className={classes.hero}>
@@ -178,6 +180,7 @@ const SocialPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>User can chat with someone else only in case that these two people are following each other. If that's the case, a nick of the other person will appear in the chat section and you can start to chat. All this magic is handled with AJAX on the frontend and on the server with the help of socket.io.</Typography>
                 </Container>
             </div>
+            <StudyCases project="Astranec" />
             <DrawerNavigation drawerState={[drawer, setDrawer]} />
         </div>
     )

@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { makeStyles } from '@material-ui/styles';
 
 import Hero from '../components/main/Hero';
 import About from '../components/main/About';
@@ -9,14 +8,8 @@ import Movies from '../components/main/IMDB';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
 
 
-const useStyles = makeStyles((theme) => ({
-    container: {
-        height: '100vh',
-    },
-}));
 
 const Main = () => {
-    const classes = useStyles();
     const [drawer, setDrawer] = useState(false);
 
     useEffect(() => {
@@ -48,7 +41,7 @@ const Main = () => {
     }, []);
 
     return (
-        <div className={classes.container} id="main-page">
+        <div id="main-page">
             <Hero drawerState={[drawer, setDrawer]}/>
             <About />
             <Social />

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import NavBar from '../components/navigation/NavBar';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
+import StudyCases from '../components/navigation/StudyCases';
+
 import clsx from 'clsx';
 
 import { Typography, makeStyles, Divider, Grid, List, ListItem, ListItemText, ListItemIcon, Container, Button, ButtonGroup } from '@material-ui/core';
@@ -11,6 +13,9 @@ import { SiTypescript } from "react-icons/si";
 
 import landingPage from '../images/wlessbuds.PNG';
 import authentication from '../images/wlessbudsAuthentication.PNG';
+import editPage from '../images/wlessbudsEdit.PNG';
+import checkoutPage from '../images/wlessbudsCheckout.PNG';
+import payment from '../images/wlessbudsPayment.PNG';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -54,7 +59,7 @@ const EcomPage = () => {
     const [drawer, setDrawer] = useState(false);
 
     return (
-        <div>
+        <div style={{paddingBottom: '30px'}}>
             <NavBar drawerState={[drawer, setDrawer]} />
             <div>
                 <div className={classes.hero}>
@@ -126,7 +131,7 @@ const EcomPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>The question was how to keep track of authenticated users and admins. I have chosen the method that is using jsonwebtokens (JWT Tokens). However, I have decided to take a little bit different approach that most would. I'm storing authenticated and admin state in redux store and also accessToken is kept there as a variable. The only exception is refreshToken that is located
                      in HTTPOnly cookies.</Typography>
                     <Typography variant="body1" paragraph gutterBottom> With this approach whenever I am accessing private route I am by default sending a request with a header containing accessToken. If the accessToken is invalid, either it has expired or there is some other problem with it, the backend will reach for a refreshToken in cookies a tries to validate it. If it is valid the server send back to the client a new accessToken which will be stored in redux store and update the current refreshToken in cookies. In the opposite case the authenticated state will be set to false and the refreshToken will be destroyed.</Typography>
-                    <Typography variant="h6" gutterBototm>Private, Restricted and Admin Routes</Typography>
+                    <Typography variant="h6" gutterBottom>Private, Restricted and Admin Routes</Typography>
                     <Typography variant="body1" paragraph gutterBottom>This section is closely realted to the authetication since to be able to enter these routes you have to meet some criterias.</Typography>
                     <Typography variant="body1" paragraph gutterBottom>Firstly Private Routes. These routes are supposed to be accessed by all users that are authenticated. In the application I have used them when accessing client's orders. The way it works is that the page loads the global authenticated state that is kept in redux store. If the user is authenticated the route will let them through,  on the other hand the client will be redirected to the login page.</Typography>
                     <Typography variant="body1" paragraph gutterBottom>Restricted Routes. These ones are quite the opposite to the private routes. The user can access them only if they are not authenticated, in this case I have used them to prevent a client to for instance login twice. The way it works is the same as the Private Routes.</Typography>
@@ -144,8 +149,32 @@ const EcomPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>Cart data are slightly different from authentication. The reason for it is that all the data is generated on the client side, thus there is no need to use async Thunk function to handle promises. Though it was a little more tricky since we have to create more robust inner logic in order to manage the states correctly.</Typography>
                     <Typography variant="body1" paragraph gutterBottom>At the end I have to bring up products data. This time we have to deal with promises again and again I'm using async Thunk function to manage it. The great thing about redux is that since I'm storing all the products there I don't have to make an API call to get the items every single time. All I need is to call the API in the beginning and then whenever I need this data I will just pull it out of the redux store. Also searching is much faster since all the data is already loaded and stored.</Typography>
                     <Typography variant="h6" gutterBottom>Admin Tools</Typography>
-                    <Typography variant="body1" paragraph gutterBottom></Typography>
+                    <Typography variant="body1" paragraph gutterBottom>As it was already said, admin has some unique features to be able to manage the site directly from frontend. In this case the admin has tools to create, edit or delete products.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Creating and editing the product tool is built basicly the same way. The only difficulty was how to store an image of the product. For this purpose I have chosen Cloudinary service where I am storing the actual image and in the database I'm only keeping a URL reference of it. On the frontend after successfully calling the API I'm then dispatching a redux reducers to update the products store.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Deleting products is then a very basic API call to remove the products from database and their images on Cloudinary. After successfully calling the API I will dispatch a redux reducer to update products store.</Typography>
+                </Container>
+                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
+                    <img src={editPage} alt="" style={{maxWidth: '100%'}}/>
+                </Container>
+                <Container maxWidth="lg" className={classes.container}>
+                    <Typography variant="caption" component="div" color="textSecondary">PROBLEM SOLUTION</Typography>
+                    <Typography variant="h6" gutterBottom>Cart, Checkout, Payment</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Since in I'm only keeping product's IDs in the cart store while rendering the cart component and displaying the data I'm using HashMap to keep track of the number of same the product. This is then sent to checkout with the total sum.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Checkout and Payments are handled with the help of Stripe API. To be able to proceed to the final stage - payment, user must enter their personal information and shipping addresses. Then the data is sent to the server to create a PaymentIntent and to calculate the total price, since sending the price directly from the client's site is very vulnerable. After that I'm calling the Stripe API with all the information.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>After a succesful payment redux reducer to clean the cart is dispatched. And the user, if he was logged in, can find his new order in Your Orders section.</Typography>
+                </Container>
+                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
+                    <img src={checkoutPage} alt="" style={{maxWidth: '100%'}}/>
                 </Container>    
+                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
+                    <img src={payment} alt="" style={{maxWidth: '100%'}}/>
+                </Container>
+                <Container maxWidth="lg" className={classes.container}>
+                    <Typography variant="caption" component="div" color="textSecondary">RESPONSIVE DESIGN</Typography>
+                    <Typography variant="h6" gutterBottom>Responsive Website</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Nowdays online shopping is mostly done our smartphones, therefore also this website is built as a responsive application and is mobile friendly.</Typography>
+                </Container>
+                <StudyCases project="WLessBuds" />   
             </div>
             <DrawerNavigation drawerState={[drawer, setDrawer]} />
         </div>

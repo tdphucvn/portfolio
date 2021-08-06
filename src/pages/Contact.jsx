@@ -43,7 +43,7 @@ const Contact = () => {
     };
 
     return (
-        <div style={{overflowY: 'auto'}}>
+        <div style={{overflowY: 'auto', minHeight: 'calc( 100vh - 64px )'}}>
             <NavBar drawerState={[drawer, setDrawer]} />
             <Container maxWidth="lg" className={classes.container}>
                 <Typography variant="h4" component="h2" align="center" gutterBottom>Contact Us</Typography>

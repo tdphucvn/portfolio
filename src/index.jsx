@@ -8,7 +8,7 @@ import { ThemeProvider } from '@material-ui/styles';
 const theme = createTheme({
   typography: {
     fontFamily: [
-      'Playfair Display',
+      'Noto Serif JP',
       'serif'
     ].join(','),
   }
