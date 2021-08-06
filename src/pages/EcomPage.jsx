@@ -11,6 +11,7 @@ import { FaHtml5, FaCss3Alt, FaNodeJs, FaDatabase, FaGithub, FaReact } from "rea
 import { FiMonitor } from "react-icons/fi";
 import { SiTypescript } from "react-icons/si";
 
+import heroBackground from '../images/wlessBudsHero.jpg'
 import landingPage from '../images/wlessbuds.PNG';
 import authentication from '../images/wlessbudsAuthentication.PNG';
 import editPage from '../images/wlessbudsEdit.PNG';
@@ -24,7 +25,12 @@ const useStyles = makeStyles((theme) => ({
     },
     hero: {
         position: 'relative',
+        backgroundImage: `url(${heroBackground})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
         height: '70vh',
+        backgroundSize: 'cover',
     },
     slider: {
         position: 'absolute',

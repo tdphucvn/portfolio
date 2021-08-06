@@ -6,7 +6,14 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
     drawer: {
-        height: '100vh'
+        height: '100vh',
+        width: '30vw',
+        [theme.breakpoints.down('md')]: {
+            width: '50vw'
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '70vw'
+        }
     },
     drawerContainer: {
         position: 'relative',
@@ -20,11 +27,23 @@ const useStyles = makeStyles((theme) => ({
         right: 20,
         '& .MuiSvgIcon-root' :{
             color: 'white',
-            fontSize: '2.5rem'
+            fontSize: '2.5rem',
+            [theme.breakpoints.down('md')]: {
+                fontSize: '2rem'
+            },
+            [theme.breakpoints.down('xs')]: {
+                fontSize: '1.5rem'
+            }
         },
         '& :hover': {
             cursor: 'pointer',
         },
+        [theme.breakpoints.down('md')]: {
+            padding: '8px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            padding: '4px'
+        }
     },
 }));
 
@@ -77,7 +96,7 @@ const DrawerNavigation = ({drawerState}) => {
 
     return (
         <div>
-          <Drawer anchor="top" open={drawer} onClose={toggleDrawer(false)} transitionDuration={{enter: 700, exit: 700}} className={classes.drawerContainer}>
+          <Drawer anchor="right" open={drawer} onClose={toggleDrawer(false)} transitionDuration={{enter: 700, exit: 700}} className={classes.drawerContainer}>
               <IconButton onClick={() => setDrawer(previousState => !previousState)} className={classes.closeButton} style={hamburgerButton}>
                 <CloseIcon />
               </IconButton>

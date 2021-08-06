@@ -39,8 +39,8 @@ const Footer = () => {
     return (
         <Container maxWidth="sm" className={classes.container}>
             <Grid container style={{height: '100%'}}>
-                {socials.map(media => (
-                    <Grid item sm={3} xs={12} className={classes.linkContainer}>
+                {socials.map((media, index) => (
+                    <Grid item sm={3} xs={12} className={classes.linkContainer} key={index}>
                         <Typography component="a" href={`${media.link}`} color="textSecondary" className={classes.link}>{media.title}</Typography>
                     </Grid>
                 ))}

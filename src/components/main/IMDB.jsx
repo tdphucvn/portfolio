@@ -9,9 +9,7 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        minHeight: '100vh',
-        paddingTop: '20px',
-
+        padding: '20px 0',
     },
     githubButton: {
         color: 'white',
@@ -23,7 +21,16 @@ const useStyles = makeStyles((theme) => ({
     projectContainer: {
         height: 'calc(88vh)',
         display: 'flex',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        [theme.breakpoints.down('md')]: {
+            display: 'none'
+        }
+    },
+    mobileImage: {
+        display: 'none',
+        [theme.breakpoints.down('md')]: {
+            display: 'block'
+        }
     }
 }));
 
@@ -77,6 +84,11 @@ const IMDB = () => {
                             <img src={background} alt="wlessbudsBackground"/>
                             <img src={background} alt="wlessbudsBackground"/>
                             <Button variant="contained" className="live-demo-button">Live Demo</Button>
+                        </div>
+                    </Grid>
+                    <Grid item md={7} style={{padding: '20px 0'}} className={classes.mobileImage}>
+                        <div>
+                            <img src={background} alt="astranecBackground" style={{width: '100%'}}/>
                         </div>
                     </Grid>
                 </Grid>

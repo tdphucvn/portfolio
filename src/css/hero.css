@@ -75,6 +75,10 @@
   animation-delay: 0.5s;
 }
 
+#astranecId:hover .astranecBackground {
+  display: block;
+}
+
 #wlessbuds {
   opacity: 0;
   animation: slideInFromRight 1.5s ease-out forwards;
@@ -111,4 +115,21 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.hideBackground {
+  opacity: 0;
+}
+
+.showBackground {
+  opacity: 1;
+  color: white;
+}
+
+.backgroundHero {
+  transition: 1s ease-out;
+}
+
+.sliderBackgroundShow {
+  opacity: 0.3;
 }

@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
         width: '15vh',
         maxWidth: 400,
         display: 'flex',
+        [theme.breakpoints.down('md')]: {
+            width: '10vh',
+            maxWidth: 300
+        },
     },
     initialsContainer: {
         justifyContent: 'center',
@@ -48,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
                 color: 'black'
             }
         },
+        [theme.breakpoints.down('md')]: {
+            height: '10vh',
+        },
     },
     initials: {
         fontWeight: 900,
@@ -59,10 +66,24 @@ const useStyles = makeStyles((theme) => ({
             height: '64px',
             width: '64px',
             borderRadius: 0,
+            [theme.breakpoints.down('md')]: {
+                height: '48px',
+                width: '48px',
+            },
+            [theme.breakpoints.down('xs')]: {
+                height: '32px',
+                width: '32px',
+            }    
         },
         '& .MuiSvgIcon-root' :{
             color: 'white',
-            fontSize: '2.5rem'
+            fontSize: '2.5rem',
+            [theme.breakpoints.down('md')]: {
+                fontSize: '2rem'
+            },
+            [theme.breakpoints.down('xs')]: {
+                fontSize: '1.5rem'
+            }    
         },
     },
 }));
