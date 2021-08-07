@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website was created to show my projects and my thoughts about the proccess of building them.
 
-## Available Scripts
+## Used Technologies
 
-In the project directory, you can run:
+This website was build using React.js as the frontend framework with the help of Material UI library.
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Hi there, I'm Philip
+I'm a self-taught Full-stack Engineer currently based in Cheb, Czech Republic.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About Me
 
-### `npm test`
+HEY THERE,
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+My name is Philip Tran.
+I express my creativity through code.
+I'm a self-taught full-stack engineer who is passionate about creating extraordinary things. Currently based in Cheb, Czech Republic.
 
-### `npm run build`
+Code has always been a way for me to express my creativity and I strongly believe that this passion will stay with me in the future as well.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Apart from coding I also enjoy writting poetry, even though I will be probably forever locked in my drawer, or wondering about various start-up ideas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To be frank, I believe that a great mind needs a healthy body. Thus gyms or basketball courts are basicly my second home.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Among my other activities I would mention researching cryptocurrencies, stocks and finance in general.
 
-### `npm run eject`
+# Technologies I'm familiar with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- HTML
+- CSS / Material UI
+- Typescript
+- Javascript
+- C#
+- Python
+- React
+- Node.js (Express.js)
+- MongoDB
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Projects
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Astranec](https://astranec.herokuapp.com/)
+- [WLessBuds](https://wlessbuds.herokuapp.com/)
+- [HDNet Movies](https://hdnetmovies.netlify.app/)
