@@ -27,7 +27,7 @@ To be frank, I believe that a great mind needs a healthy body. Thus gyms or bask
 
 Among my other activities I would mention researching cryptocurrencies, stocks and finance in general.
 
-# Technologies I'm familiar with
+## Technologies I'm familiar with
 
 - HTML
 - CSS / Material UI
@@ -39,7 +39,7 @@ Among my other activities I would mention researching cryptocurrencies, stocks a
 - Node.js (Express.js)
 - MongoDB
 
-# Projects
+## Projects
 
 - [Astranec](https://astranec.herokuapp.com/)
 - [WLessBuds](https://wlessbuds.herokuapp.com/)
