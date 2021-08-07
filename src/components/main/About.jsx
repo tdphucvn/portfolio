@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         overflowY: 'hidden',
-        paddingTop: '20px',
+        padding: '20px 0',
     },
 }));
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import NavBar from '../components/navigation/NavBar';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
 import StudyCases from '../components/navigation/StudyCases';
+import YoutubeEmbed from '../components/shared/YoutubeEmbed';
 
 import clsx from 'clsx';
 
@@ -179,8 +180,13 @@ const SocialPage = () => {
                     <Typography variant="h6" gutterBottom>Real-time Chatting</Typography>
                     <Typography variant="body1" paragraph gutterBottom>User can chat with someone else only in case that these two people are following each other. If that's the case, a nick of the other person will appear in the chat section and you can start to chat. All this magic is handled with AJAX on the frontend and on the server with the help of socket.io.</Typography>
                 </Container>
+                <Container maxWidth="lg" className={classes.container}>
+                    <Typography variant="caption" component="div" color="textSecondary">Live Demo</Typography>
+                    <Typography variant="h6" gutterBottom>Astranec Demo Showcase</Typography>
+                    <YoutubeEmbed videoURL="IykK5f-pNqc"/>
+                </Container>
+                <StudyCases project="Astranec" />
             </div>
-            <StudyCases project="Astranec" />
             <DrawerNavigation drawerState={[drawer, setDrawer]} />
         </div>
     )

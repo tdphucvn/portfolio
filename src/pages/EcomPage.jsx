@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import NavBar from '../components/navigation/NavBar';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
 import StudyCases from '../components/navigation/StudyCases';
+import YoutubeEmbed from '../components/shared/YoutubeEmbed';
 
 import clsx from 'clsx';
 
@@ -144,7 +145,7 @@ const EcomPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>Last but not least, Admin Routes. As I have already mention, admin has a few unique tools in order to manage the site from frontend. And that's the situation when I use these type of routes. A user must be an admin to be able to access them. This component is build very much the same way as the previous routes. The only difference is that I am no longer checking for authenticated, though for admin state.</Typography>                
                 </Container>
                 <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={authentication} alt="" style={{maxWidth: '100%'}}/>
+                    <img src={authentication} alt="" style={{maxWidth: '100%',  height: 'auto'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">PROBLEM SOLUTION</Typography>
@@ -159,8 +160,8 @@ const EcomPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>Creating and editing the product tool is built basicly the same way. The only difficulty was how to store an image of the product. For this purpose I have chosen Cloudinary service where I am storing the actual image and in the database I'm only keeping a URL reference of it. On the frontend after successfully calling the API I'm then dispatching a redux reducers to update the products store.</Typography>
                     <Typography variant="body1" paragraph gutterBottom>Deleting products is then a very basic API call to remove the products from database and their images on Cloudinary. After successfully calling the API I will dispatch a redux reducer to update products store.</Typography>
                 </Container>
-                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={editPage} alt="" style={{maxWidth: '100%'}}/>
+                <Container maxWidth="lg" className={classes.container}>
+                    <img src={editPage} alt="" style={{maxWidth: '100%', height: 'auto'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">PROBLEM SOLUTION</Typography>
@@ -170,15 +171,20 @@ const EcomPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>After a succesful payment redux reducer to clean the cart is dispatched. And the user, if he was logged in, can find his new order in Your Orders section.</Typography>
                 </Container>
                 <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={checkoutPage} alt="" style={{maxWidth: '100%'}}/>
+                    <img src={checkoutPage} alt="" style={{maxWidth: '100%',  height: 'auto'}}/>
                 </Container>    
                 <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={payment} alt="" style={{maxWidth: '100%'}}/>
+                    <img src={payment} alt="" style={{maxWidth: '100%', height: 'auto'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">RESPONSIVE DESIGN</Typography>
                     <Typography variant="h6" gutterBottom>Responsive Website</Typography>
                     <Typography variant="body1" paragraph gutterBottom>Nowdays online shopping is mostly done our smartphones, therefore also this website is built as a responsive application and is mobile friendly.</Typography>
+                </Container>
+                <Container maxWidth="lg" className={classes.container}>
+                    <Typography variant="caption" component="div" color="textSecondary">Live Demo</Typography>
+                    <Typography variant="h6" gutterBottom>WLessBuds Demo Showcase</Typography>
+                    <YoutubeEmbed videoURL="6_iCTbN71J4"/>
                 </Container>
                 <StudyCases project="WLessBuds" />   
             </div>

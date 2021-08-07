@@ -21,7 +21,6 @@ const StudyCases = ({project}) => {
     const classes = useStyles();
 
     useEffect(() => {
-        console.log(project);
         const projectsToDisplay = projects.filter((pro) => pro.title !== project);
         setDisplayedProjects(projectsToDisplay);
     }, [project]);

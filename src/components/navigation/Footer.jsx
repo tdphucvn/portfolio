@@ -22,7 +22,7 @@ const socials = [
     },
     {
         title: 'Instagram',
-        link: 'https://www.instagram.com/unglaublichcafe11/?hl=cs',
+        link: 'https://www.instagram.com/tdphucvn/?hl=cs',
     },
     {
         title: 'LinkedIn',
@@ -41,7 +41,7 @@ const Footer = () => {
             <Grid container style={{height: '100%'}}>
                 {socials.map((media, index) => (
                     <Grid item sm={3} xs={12} className={classes.linkContainer} key={index}>
-                        <Typography component="a" href={`${media.link}`} color="textSecondary" className={classes.link}>{media.title}</Typography>
+                        <Typography component="a" target="_blank" href={`${media.link}`} color="textSecondary" className={classes.link}>{media.title}</Typography>
                     </Grid>
                 ))}
             </Grid>

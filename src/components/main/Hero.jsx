@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
-        width: '90%',
+        width: '45%',
     },
     astranec: {
         position: 'absolute',
@@ -120,7 +120,6 @@ const Hero = ({drawerState}) => {
         const astranecBackground = document.querySelector('.astranecBackground');
         const slider = document.querySelector('.sliderBackground');
         astranec.addEventListener('mouseover', () => {
-            console.log('hej')
             astranecBackground.classList.add('showBackground');
             slider.classList.add('sliderBackgroundShow');
         });
@@ -132,8 +131,6 @@ const Hero = ({drawerState}) => {
         const wlessbuds = document.getElementById('wlessbuds');
         const wlessbudsBackground = document.querySelector('.wlessbudsBackground');
         wlessbuds.addEventListener('mouseover', () => {
-            console.log('ne')
-
             wlessbudsBackground.classList.add('showBackground');
             slider.classList.add('sliderBackgroundShow');
         });
@@ -145,8 +142,6 @@ const Hero = ({drawerState}) => {
         const hdnet = document.getElementById('hdnetmovies');
         const hdnetBackground = document.querySelector('.hdnetBackground');
         hdnet.addEventListener('mouseover', () => {
-            console.log('jo')
-
             hdnetBackground.classList.add('showBackground');
             slider.classList.add('sliderBackgroundShow');
         });
@@ -160,7 +155,7 @@ const Hero = ({drawerState}) => {
         <section className={clsx(classes.container, 'js-scroll')} name="hero">
             <NavBar drawerState={[drawer, setDrawer]} />
             <Grid container className={classes.gridContainer}>
-                <Grid item md={12} lg={4} className={clsx(classes.leftColumn, classes.column, 'leftAnimation')}>
+                <Grid item md={12} lg={3} className={clsx(classes.leftColumn, classes.column, 'leftAnimation')}>
                     <div style={{width: '90%', marginBottom: '25px'}} className="animation-first-order">
                         <Typography variant="caption" color="textSecondary">INTRODUCTION</Typography>
                     </div>
@@ -181,29 +176,31 @@ const Hero = ({drawerState}) => {
                     <Divider className={classes.socialMediasDivider}></Divider>
                     <div className={clsx(classes.socialMedias, 'animation-first-order')}>
                         <ButtonGroup className={classes.socialMediasButtons} disableElevation={true} fullWidth={false}>
-                            <Button variant="text" style={{opacity: 0.6}}><FacebookIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}}><InstagramIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}}><LinkedInIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}}><GitHubIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.facebook.com/philip.tranphuc/"><FacebookIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.instagram.com/tdphucvn/?hl=cs"><InstagramIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.linkedin.com/in/philip-tran-a65846208/"><LinkedInIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://github.com/tdphucvn"><GitHubIcon /></Button>
                         </ButtonGroup>
                     </div>
                 </Grid>
-                <Grid item md={8} className={clsx(classes.rightColumn, classes.column, 'rightAnimation')}>
+                <Grid item md={9} className={clsx(classes.rightColumn, classes.column, 'rightAnimation')}>
                     <div style={{paddingTop: '20vh', height: '80vh', width: '100%', zIndex: 5}} className={classes.rightColumnContainer}>
                         <div style={{width: '90%', display: 'flex', justifyContent: 'flex-end'}}>
                             <Typography variant="caption" align="right" style={{width: '100%', marginRight: '16px'}} color="textSecondary">MY PROJECTS</Typography>
                         </div>
-                        <List className={classes.studyCasesContainer}>
-                            <ListItem component={RouterLink} to={'/astranec'} className="study-cases" id="astranec" style={{width: '100%', justifyContent: 'flex-end'}}>
-                                <Typography variant="h4" component="h2">Astranec</Typography>
-                            </ListItem>
-                            <ListItem component={RouterLink} to={'/wlessbuds'} className="study-cases" id="wlessbuds" style={{width: '100%', justifyContent: 'flex-end'}}>
-                                <Typography variant="h4" component="h2">WLessBuds</Typography>
-                            </ListItem>
-                            <ListItem component={RouterLink} to={'/hdnetmovies'} className="study-cases" id="hdnetmovies" style={{width: '100%', justifyContent: 'flex-end'}}>
-                                <Typography variant="h4" component="h2">HDNet Movies</Typography>
-                            </ListItem>
-                        </List>
+                        <div style={{display: 'flex', justifyContent: 'flex-end', width: '90%'}}>
+                            <List className={classes.studyCasesContainer}>
+                                <ListItem component={RouterLink} to={'/astranec'} className="study-cases" id="astranec" style={{width: '100%', justifyContent: 'flex-end'}}>
+                                    <Typography variant="h4" component="h2">Astranec</Typography>
+                                </ListItem>
+                                <ListItem component={RouterLink} to={'/wlessbuds'} className="study-cases" id="wlessbuds" style={{width: '100%', justifyContent: 'flex-end'}}>
+                                    <Typography variant="h4" component="h2">WLessBuds</Typography>
+                                </ListItem>
+                                <ListItem component={RouterLink} to={'/hdnetmovies'} className="study-cases" id="hdnetmovies" style={{width: '100%', justifyContent: 'flex-end'}}>
+                                    <Typography variant="h4" component="h2">HDNet Movies</Typography>
+                                </ListItem>
+                            </List>
+                        </div>
                     </div>
                     <div className={clsx(classes.astranec, 'astranecBackground', 'hideBackground', 'backgroundHero')}></div>
                     <div className={clsx(classes.wlessbuds, 'wlessbudsBackground', 'hideBackground', 'backgroundHero')}></div>

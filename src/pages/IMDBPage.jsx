@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import NavBar from '../components/navigation/NavBar';
 import DrawerNavigation from '../components/navigation/DrawerNavigation';
 import StudyCases from '../components/navigation/StudyCases';
+import YoutubeEmbed from '../components/shared/YoutubeEmbed';
 
 import clsx from 'clsx';
 
@@ -113,8 +114,8 @@ const IMDBPage = () => {
                         </Grid>
                     </Grid>
                 </Container>
-                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={moviePreview} alt="" style={{maxWidth: '100%'}}/>
+                <Container maxWidth="lg" className={classes.container}>
+                    <img src={moviePreview} alt="" style={{width: '100%'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">DESIGN SOLUTION</Typography>
@@ -124,24 +125,29 @@ const IMDBPage = () => {
                     <Typography variant="h6" component="h6" gutterBottom>Discover Feature</Typography>
                     <Typography variant="body1" paragraph gutterBottom>The discover section has three options. The first one is to display top 20 movies depending on whether they were trending last week. The second option is to sort them in the descending order by the revenue they have made. And the last option is to sort them according to their date of release. Furthermore I have also added an option of a custom search, where the clients can discover movies however they want it to be.</Typography>
                 </Container>
-                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={movieLand} alt="" style={{maxWidth: '100%'}}/>
+                <Container maxWidth="lg" className={classes.container}>
+                    <img src={movieLand} alt="" style={{width: '100%'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">DESIGN SOLUTION</Typography>
                     <Typography variant="h6" gutterBottom>Actors</Typography>
                     <Typography variant="body1" paragraph gutterBottom>The user is given an opportunity to search for an actor, but not only them. Producers, directors and other crew members are also in the database. And when it comes to displaying data about a certain person I'm fetching their biography, all the general personal information and the movies their are best known for.</Typography>
                 </Container>
-                <Container maxWidth="lg" className={classes.container} style={{display: 'flex', justifyContent: 'center'}}>
-                    <img src={movieActor} alt="" style={{maxWidth: '100%'}}/>
+                <Container maxWidth="lg" className={classes.container}>
+                    <img src={movieActor} alt="" style={{width: '100%'}}/>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">DESIGN SOLUTION</Typography>
                     <Typography variant="h6" gutterBottom>Movies</Typography>
                     <Typography variant="body1" paragraph gutterBottom>The user is given an opportunity to search for a movie, with its title or the release year. When it comes to displaying the data about the movie I am fetching all the general information such as title, descirption, release year, rating etc. What's more on the landing page I am showing the most important members of the crew like producer or director. In the section above it the user can find the whole cast of the movie and movies that are similar or are recommended to the original one.</Typography>
                 </Container>
+                <Container maxWidth="lg" className={classes.container}>
+                    <Typography variant="caption" component="div" color="textSecondary">Live Demo</Typography>
+                    <Typography variant="h6" gutterBottom>HDNet Movies Demo Showcase</Typography>
+                    <YoutubeEmbed videoURL="BGZOmnE5RUI"/>
+                </Container>
+                <StudyCases project="HDNet Movies" />
             </div>
-            <StudyCases project="HDNet Movies" />
             <DrawerNavigation drawerState={[drawer, setDrawer]} />
         </div>
     )

@@ -62,13 +62,13 @@ const AboutContent = () => {
                         <div>
                             <Typography variant="caption" color="textSecondary">GET IN TOUCH</Typography>
                             <div className={classes.contactSection}>
-                                <Typography variant="caption" color="textSecondary">Elsewhere</Typography>
+                                <Typography variant="caption" color="textSecondary">Social Medias</Typography>
                                 <Divider></Divider>
                                 <ButtonGroup className={classes.socialMediasButtons} disableElevation={true} fullWidth={false}>
-                                    <Button variant="text" style={{opacity: 0.6}}><FacebookIcon /></Button>
-                                    <Button variant="text" style={{opacity: 0.6}}><InstagramIcon /></Button>
-                                    <Button variant="text" style={{opacity: 0.6}}><LinkedInIcon /></Button>
-                                    <Button variant="text" style={{opacity: 0.6}}><GitHubIcon /></Button>
+                                    <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.facebook.com/philip.tranphuc/"><FacebookIcon /></Button>
+                                    <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.instagram.com/tdphucvn/?hl=cs"><InstagramIcon /></Button>
+                                    <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.linkedin.com/in/philip-tran-a65846208/"><LinkedInIcon /></Button>
+                                    <Button variant="text" style={{opacity: 0.6}} component="a" href="https://github.com/tdphucvn"><GitHubIcon /></Button>
                                 </ButtonGroup>
                             </div>
                             <div className={classes.contactSection}>
