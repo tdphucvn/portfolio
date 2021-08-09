@@ -176,10 +176,10 @@ const Hero = ({drawerState}) => {
                     <Divider className={classes.socialMediasDivider}></Divider>
                     <div className={clsx(classes.socialMedias, 'animation-first-order')}>
                         <ButtonGroup className={classes.socialMediasButtons} disableElevation={true} fullWidth={false}>
-                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.facebook.com/philip.tranphuc/"><FacebookIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.instagram.com/tdphucvn/?hl=cs"><InstagramIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.linkedin.com/in/philip-tran-a65846208/"><LinkedInIcon /></Button>
-                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://github.com/tdphucvn"><GitHubIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.facebook.com/philip.tranphuc/" target="_blank"><FacebookIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.instagram.com/tdphucvn/?hl=cs" target="_blank"><InstagramIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://www.linkedin.com/in/philip-tran-a65846208/" target="_blank"><LinkedInIcon /></Button>
+                            <Button variant="text" style={{opacity: 0.6}} component="a" href="https://github.com/tdphucvn" target="_blank"><GitHubIcon /></Button>
                         </ButtonGroup>
                     </div>
                 </Grid>

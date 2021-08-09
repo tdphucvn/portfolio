@@ -142,7 +142,7 @@ const SocialPage = () => {
                     <Typography variant="h5" gutterBottom>Approach to the Problem</Typography>
                     <Typography variant="h6" component="h6" gutterBottom>Authentication</Typography>
                     <Typography variant="body1" paragraph gutterBottom>After setting up the application and the database, the first thing I jumped on was the authentication - Sign In and Sign Up and keeping track of an authenticated user. 
-                    As for validation and checking the correctnes of inputs from client I have decided to use <strong>JOI</strong> with the help of regular expressions. 
+                    As for validation and checking the correctness of inputs from client I have decided to use <strong>JOI</strong> with the help of regular expressions. 
                     Password hashing is then handled by <strong>bcrypt</strong>. Though, how about keeping track of the state if the user is authenticated or not? 
                     This was done with the help of <strong>jsonwebtoken (JWT)</strong>. 
                     AccessToken and RefreshToken are then sent to the client through HTTPOnly Cookies. 
@@ -168,9 +168,9 @@ const SocialPage = () => {
                     <Typography variant="body1" paragraph gutterBottom>This was a little bit more tricky task to do. 
                     Since using a non-relational database is not quite the best option for it. A graph databse would be a better tool. 
                     The difficulty I have to dealt with was that when a user A follows user B both attributes: namely followers of user B and following user A has to be updated. 
-                    This goes hand in hand with unfollowing as well. And know who follows who is quite important as well when it comes to chatting.</Typography>
+                    This goes hand in hand with unfollowing as well. Knowing who follows who is quite important as well when it comes to chatting.</Typography>
                     <Typography variant="h6" gutterBottom>Likes and Comments</Typography>
-                    <Typography variant="body1" paragraph gutterBottom>This was done very similarly to creating milestones and posts. The only difference was that these object are refering to ObjectId of the post.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>This was done very similarly to creating milestones and posts. The only difference was that these object are reffering to ObjectId of the post.</Typography>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <img src={profilePage} alt="" style={{width: '100%'}} />
@@ -178,7 +178,7 @@ const SocialPage = () => {
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">PROBLEM SOLUTION</Typography>
                     <Typography variant="h6" gutterBottom>Real-time Chatting</Typography>
-                    <Typography variant="body1" paragraph gutterBottom>User can chat with someone else only in case that these two people are following each other. If that's the case, a nick of the other person will appear in the chat section and you can start to chat. All this magic is handled with AJAX on the frontend and on the server with the help of socket.io.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>User can chat with someone else only in the case that these two people are following each other. If that's the case, a nick of the other person will appear in the chat section and you can start chatting. All this magic is handled with AJAX on the frontend and on the server with the help of socket.io.</Typography>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">Live Demo</Typography>
