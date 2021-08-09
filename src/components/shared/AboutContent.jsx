@@ -52,8 +52,8 @@ const AboutContent = () => {
                             <Typography variant="h6" gutterBottom className={classes.header6}>I express my creativity through code.</Typography>
                             <Typography variant="body1" paragraph gutterBottom className={classes.body1}>I'm a self-taught full-stack engineer who is passionate about creating extraordinary things. Currently based in Cheb, Czech Republic.</Typography>
                             <Typography variant="body1" paragraph gutterBottom className={classes.body1}>Code has always been a way for me to express my creativity and I strongly believe that this passion will stay with me in the future as well.</Typography>
-                            <Typography variant="body1" paragraph gutterBottom className={classes.body1}>Apart from coding I also enjoy writting poetry, even though I will be probably forever locked in my drawer, or wondering about various start-up ideas.</Typography>
-                            <Typography variant="body1" paragraph gutterBottom className={classes.body1}>To be frank, I believe that a great mind needs a healthy body. Thus gyms or basketball courts are basicly my second home.</Typography>
+                            <Typography variant="body1" paragraph gutterBottom className={classes.body1}>Apart from coding I am very keen on writing on poetry as well, however, it's not the art I want to share with the world so it may stay locked in my drawer forever. When I'm not writing I let my mind wander and oftentimes it brings me new various start-up ideas</Typography>
+                            <Typography variant="body1" paragraph gutterBottom className={classes.body1}>I strongly believe that a healthy mind needs a healthy body. Thus I spend most of my spare time in gym or on a basketball court.</Typography>
                             <Typography variant="body1" paragraph gutterBottom className={classes.body1}>Among my other activities I would mention researching cryptocurrencies, stocks and finance in general.</Typography>
                         </div>
                         

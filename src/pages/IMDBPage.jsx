@@ -83,7 +83,7 @@ const IMDBPage = () => {
                             <Typography variant="h5" gutterBottom>Given Problem</Typography>
                             <Typography variant="body1" paragraph gutterBottom>The task was to create a fully functional movie database with features such as search, sort or discover and to put an emphasis on the design.</Typography>                        
                             <Typography variant="h5" gutterBottom>Application Design</Typography>
-                            <Typography variant="body1" paragraph gutterBottom>For this particular application I have decided to use an external API, thus I don't have to have my own backend set up. I'm TMDB API and for the frontend I have chosen React.js framework and Material UI library for styling.</Typography>                        
+                            <Typography variant="body1" paragraph gutterBottom>For this particular application I have decided to use an external API, thus I don't have to have my own backend set up. I'm fetching from TMDB API and for the frontend I have chosen React.js framework and Material UI library for styling.</Typography>                        
                             <Typography variant="body1" paragraph gutterBottom>In order to be able to communicate with the API I am using Javascript built-in Fetch API.</Typography>
                         </Grid>
                         <Grid item sm={4}>

@@ -82,7 +82,7 @@ const EcomPage = () => {
                     <Grid container spacing={3}>
                         <Grid item sm={8}>
                             <Typography variant="h5" gutterBottom>Abstract</Typography>
-                            <Typography variant="body1" paragraph gutterBottom>This project was build using React.js and Material UI for frontend. All the magic behind the scenes is handled with Express.js and payments are securely managed by Stripe.</Typography>
+                            <Typography variant="body1" paragraph gutterBottom>This project was build using React.js and Material UI for the frontend. All the magic behind the scenes is handled with Express.js and payments are securely managed by Stripe.</Typography>
                             <Typography variant="h5" gutterBottom>Given Problem</Typography>
                             <Typography variant="body1" paragraph gutterBottom>The task was to create a fully functional ecommerce website with all the common features both for client and admin. For the user it means searching products, view its details, sorting, adding and removing from cart and checking out securely. On the other hand an admin should have a few unique tools such as creating, editing or removing a product.</Typography>                        
                             <Typography variant="h5" gutterBottom>Application Design</Typography>
@@ -179,7 +179,7 @@ const EcomPage = () => {
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">RESPONSIVE DESIGN</Typography>
                     <Typography variant="h6" gutterBottom>Responsive Website</Typography>
-                    <Typography variant="body1" paragraph gutterBottom>Nowdays online shopping is mostly done our smartphones, therefore also this website is built as a responsive application and is mobile friendly.</Typography>
+                    <Typography variant="body1" paragraph gutterBottom>Nowdays online shopping is mostly done on our smartphones, therefore also this website is built as a responsive application and is mobile friendly.</Typography>
                 </Container>
                 <Container maxWidth="lg" className={classes.container}>
                     <Typography variant="caption" component="div" color="textSecondary">Live Demo</Typography>
