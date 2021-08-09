@@ -4,7 +4,7 @@ This website was created to show my projects and my thoughts about the proccess 
 
 ## Used Technologies
 
-This website was build using React.js as the frontend framework with the help of Material UI library.
+This website was built using React.js as the frontend framework with the help of Material UI library.
 
 ## Introduction
 
